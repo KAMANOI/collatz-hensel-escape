@@ -8,6 +8,16 @@ Proves that arithmetic "memory" in Collatz height record sequences is not a fail
 
 ---
 
+## Erratum (2026-11-12)
+
+- **Theorem 4.2 is conditional, not proved.** The PDF itself lists it as "Proved (conditional)": it assumes that every orbit with unbounded a_t has infinitely many gate-1 records, and gate-2 records are left open. The table below previously said "proved".
+- The direction "no escape pair implies Collatz" also invokes Theorem Monotonicity (Paper M), whose "each height once" part is false (see the erratum of the series summary), and it does not address nontrivial cycles.
+- Unaffected: the Hensel nesting lemma and Theorem HMC parts (a) and (c).
+
+The PDF in `paper/` is the original, uncorrected version.
+
+---
+
 ## Overview
 
 Gate-1 synchronization targets r_K = −3⁻¹ mod 2^K form a nested Cauchy sequence in ℤ₂ converging to r_∞ = −3⁻¹. If a Collatz orbit achieves infinitely many gate-1 height records with Kᵢ → ∞, the odd-core values must simultaneously converge 2-adically to −3⁻¹ and diverge in ℝ — a "2-adic escape pair."
@@ -28,7 +38,7 @@ The central results are:
 |--------|--------|--------|
 | Hensel nesting: r_{K′} ≡ r_K (mod 2^K) for K′ ≥ K | Hensel's lemma | ✓ proved |
 | Theorem HMC: 2-adic convergence + Archimedean divergence | 2-adic analysis | ✓ proved |
-| Theorem 4.2: Collatz ⟺ no 2-adic escape pair | Equivalence | ✓ proved |
+| Theorem 4.2: Collatz ⟺ no 2-adic escape pair | Equivalence | conditional, see Erratum |
 | −3⁻¹ ∉ ℤ_{>0} | Elementary | ✓ proved |
 
 ### Open
